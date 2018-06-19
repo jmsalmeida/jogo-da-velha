@@ -17,44 +17,21 @@ function fabricarJogada() {
 }
 
 function compararCasas(casa1, casa2, casa3){
-    if(casa1.innerHTML === casa2.innerHTML && casa2.innerHTML === casa3.innerHTML){
-        alert("ACERTOU FDPT GANHOW DIZZZGRAÇA");
+    //Se a casa 1 for diferente de vazio as outras obrigatoriamente também serão.
+    if(casa1.innerHTML !== "" && casa1.innerHTML === casa2.innerHTML && casa2.innerHTML === casa3.innerHTML){
+        alert("Ganhou");
     }
 }
 
 function encerrarJogo(){
-    if(jogoDaVelha[0].innerHTML !== "" && jogoDaVelha[1].innerHTML !== "" && jogoDaVelha[2].innerHTML !== ""){
-        compararCasas(jogoDaVelha[0], jogoDaVelha[1], jogoDaVelha[2]);
-    }
-    
-    if(jogoDaVelha[0].innerHTML !== "" && jogoDaVelha[3].innerHTML !== "" && jogoDaVelha[6].innerHTML !== ""){
-        compararCasas(jogoDaVelha[0], jogoDaVelha[3], jogoDaVelha[6]);
-    }
-
-    if(jogoDaVelha[0].innerHTML !== "" && jogoDaVelha[4].innerHTML !== "" && jogoDaVelha[8].innerHTML !== ""){
-        compararCasas(jogoDaVelha[0], jogoDaVelha[4], jogoDaVelha[8]);
-    }
-
-    if(jogoDaVelha[3].innerHTML !== "" && jogoDaVelha[4].innerHTML !== "" && jogoDaVelha[5].innerHTML !== ""){
-        compararCasas(jogoDaVelha[3], jogoDaVelha[4], jogoDaVelha[5]);
-    }
-
-    if(jogoDaVelha[6].innerHTML !== "" && jogoDaVelha[7].innerHTML !== "" && jogoDaVelha[8].innerHTML !== ""){
-        compararCasas(jogoDaVelha[6], jogoDaVelha[7], jogoDaVelha[8]);
-    }
-
-    if(jogoDaVelha[1].innerHTML !== "" && jogoDaVelha[4].innerHTML !== "" && jogoDaVelha[7].innerHTML !== ""){
-        compararCasas(jogoDaVelha[1], jogoDaVelha[4], jogoDaVelha[7]);
-    }
-
-    if(jogoDaVelha[2].innerHTML !== "" && jogoDaVelha[5].innerHTML !== "" && jogoDaVelha[8].innerHTML !== ""){
-        compararCasas(jogoDaVelha[2], jogoDaVelha[5], jogoDaVelha[8]);
-    }
-
-    if(jogoDaVelha[2].innerHTML !== "" && jogoDaVelha[4].innerHTML !== "" && jogoDaVelha[6].innerHTML !== ""){
-        compararCasas(jogoDaVelha[2], jogoDaVelha[4], jogoDaVelha[6]);
-    }   
-    
+    compararCasas(jogoDaVelha[0], jogoDaVelha[1], jogoDaVelha[2]);
+    compararCasas(jogoDaVelha[0], jogoDaVelha[3], jogoDaVelha[6]);
+    compararCasas(jogoDaVelha[0], jogoDaVelha[4], jogoDaVelha[8]);
+    compararCasas(jogoDaVelha[3], jogoDaVelha[4], jogoDaVelha[5]);
+    compararCasas(jogoDaVelha[6], jogoDaVelha[7], jogoDaVelha[8]);
+    compararCasas(jogoDaVelha[1], jogoDaVelha[4], jogoDaVelha[7]);
+    compararCasas(jogoDaVelha[2], jogoDaVelha[5], jogoDaVelha[8]);
+    compararCasas(jogoDaVelha[2], jogoDaVelha[4], jogoDaVelha[6]);
 }
 
 function clicar() {
